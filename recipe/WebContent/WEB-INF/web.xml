@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>recipe</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+
+  
+  
+  
+  <servlet>
+  	<servlet-name>listServlet</servlet-name>
+  	<servlet-class>com.list.ListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>listServlet</servlet-name>
+  	<url-pattern>/rcp/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Servlet 회원가입 -->
+  <servlet>
+  	<servlet-name>memberServlet</servlet-name>
+  	<servlet-class>com.join.MemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>memberServlet</servlet-name>
+  	<url-pattern>/join/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>recServlet</servlet-name>
+  	<servlet-class>com.rec.RecServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>recServlet</servlet-name>
+  	<url-pattern>/rec/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>guestServlet</servlet-name>
+  	<servlet-class>com.guest.GuestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>guestServlet</servlet-name>
+  	<url-pattern>/guest/*</url-pattern>
+  </servlet-mapping>
+
+
+  
+</web-app>
